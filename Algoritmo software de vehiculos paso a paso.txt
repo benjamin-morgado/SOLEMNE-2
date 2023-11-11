@@ -1,0 +1,170 @@
+Algoritmo software de vehiculos de transporte
+
+- declarar lista con variables "supervisor" u "operario"
+- declarar variable en una lista con los numeros de operarios
+- declarar variable en una lista con la contraseña de los operarios
+- declarar variable intento en 1 para contar los errores de clave
+
+variables necesarias:
+	- lista (supervisor, operario)
+	- lista (n°s de operarios)
+	- lista (supervisores)
+	- lista (claves de operarios)
+	- lista (claves de supervisores)
+	- intento = 1
+	- lista base de datos para kms, petroleo, hora y minutos [0,0,0,0,0]
+	- detener = 0 (para detener el programa)(en prueba)
+
+- mientras detener sea distinto a 1
+- preguntar si es operario o supervisor
+- pasar la respuesta a mayusculas
+- buscar la respuesta del usuario en la lista creada
+- si el usuario ingresó operario
+- dar la bienvenida al programa
+- pedir al usuario su n° de operario
+- crear variable indice que sera igual a la respuesta - 1
+- buscamos la respuesta del usuario en la lista creada
+- si el ingreso del usuario está en la lista
+- declaramos la clave que usaremos para verificar la eleccion del usuario usando la lista de las contraseñas y como indice la variable que cramos antes
+- preguntamos al usuario la contraseña y almacenamos su respuesta en una variable
+- bucle mientras la clave ingresada sea distinta a la almacenada en la lista
+- imprimimos error
+- imprimimos el intento
+- se pregunta nuevamente la clave
+- sumamos 1 a la variable intento
+- si la variable intento llega a 4 arroja error con ayuda de un raise exception
+- si la clave ingresada es igual a la almacenada Se ingresa al programa
+****
+- se le da la bienvenida al operario ingresado
+- inicia un bucle mientras sea verdadero.
+- se le pide al usuario ingresar un valor de tipo int con longitud de 8 digitos
+- se hace una copia del valor ingresado
+- se declara una variable contador con valor 0
+- se inicia un bucle mientras la respuesta sea mayor a 0
+- se divide la respuesta en 10 y se suma 1 a la variable contador
+- si la variable contador es igual a 8. la respuesta está bien la imprime. y sale de bucle
+- si no, indica que el valor ingresado no tiene 8 digitos
+- creamos un bucle mientras sea verdadero
+- se le pide al usuario que ingrese el mes
+- evaluar si el mes es mayor a 0 y menor a 13 (1-12). aceptar la fecha indicada. imprime mes registrado.
+- si no cumple. indicar error y vuelve a preguntar
+- creamos un bucle mientras sea verdadero
+- se le pide al usuario que ingrese el dia
+- evualar si el mes ingresado es febrero. si es:
+- imprimir que se ingresó el mes 2
+- evaluar si dia es mayor a 0 y menor a 29
+- si el mes es otro
+- evaluar si el dia es mayor a 0 y menor a 32 (1-31). si cumple, aceptar la fecha indicada y termina el bucle. imprime dia registrado.
+- si no cumple. indicar error y vuelve a preguntar
+- creamos un bucle mientras sea verdadero
+- se le pide al usuario que ingrese el año
+- evaluar si el año es mayor a 2022 y menor a 2025 (2023-2024). aceptar la fecha indicada. imprime año registrado.
+- si no cumple. indicar error y vuelve a preguntar
+- imprimir separando por guiones el dia - mes y el - año
+- creamos un bucle mientras sea verdadero
+- se le pide al usuario que ingrese el kilometraje
+- evaluar si el kilometraje es mayor a 0.
+- guardar el km en la lista con ayuda de la variable indice (ingreso op - 1)
+- imprimimos kms registrados
+- salimos del bucle
+- caso contrario indicamos error y se repite
+- creamos un bucle mientras sea verdadero
+- se le pide al usuario que ingrese el petroleo en litros
+- evaluar si el petroleo es mayor a 0
+- guardar petroleo en la lista con la variable indice (ingreso op - 1)
+- imprimos litros registrados
+- Si es así, salimos del bucle
+- caso contrario indicamos error y se repite
+- bucle mientras sea verdadero
+- pedimos al usuario ingresar la hora inicial
+- evaluamos si la hora es mayor igual a 0 y menor igual a 24
+- guardamos la hora en la lista con la variable indice
+- termina el bucle
+- bucle mientras sea verdadero
+- pedimos al usuario ingresar los minutos de la hora inicial
+- evaluamos si los minutos son mayores iguales a 0 y menores iguales a 60
+- guardamos los minutos en la lista con la variable indice
+- termina el bucle
+- imprime desde la lista la hora inicio y el minuto incio
+- bucle mientras sea verdadero
+- pedimos al usuario ingresar la hora de termino
+- evaluamos si la hora es mayor igual a 0 y menor igual a 24
+- guardamos la hora en la lista con la variable indice
+- termina el bucle
+- bucle mientras sea verdadero
+- pedimos al usuario ingresar los minutos de la hora de termino
+- evaluamos si los minutos son mayores iguales a 0 y menores iguales a 60
+- guardamos los minutos en la lista con la variable indice
+- termina el bucle
+- imprime desde la lista la hora termino y el minuto termino
+- imprime en pantalla datos confirmados. volviendo al menú.
+- vuelve al menú y realiza la pregunta 1.
+- si el usuario ingresó supervisor
+- da la bienvenida al sistema
+- pedir al usuario su nombre de supervisor
+- buscamos la respuesta del usuario en la lista creada
+- si el ingreso del usuario está en la lista
+- preguntamos al usuario la contraseña y almacenamos su respuesta en una variable
+- bucle mientras la clave ingresada sea distinta a la almacenada previamente
+- imprimimos error
+- imprimimos el intento
+- se pregunta nuevamente la clave
+- sumamos 1 a la variable intento
+- si la variable intento llega a 4 arroja error con ayuda de un raise exception
+- si la clave ingresada es igual a la almacenada 
+- bucle mientras existan ceros en la lista kms base de datos
+- se eliminaran con ayuda de .remove(0)
+- se declara la variable total kms que será igual a la suma de todos los elementos de la lista con ayuda de sum()
+- bucle mientras existan ceros en la lista petroleo
+- se eliminaran con ayuda de .remove(0)
+- se declara la variable total p (petroleo) que será igual a la suma de todos los elementos de la lista con ayuda de sum()
+- se declara una variable de hora inicio sin ceros que sera igual a la hora ingresada por el usuario
+- bucle mientras existan ceros en la variable creada
+- se eliminaran con ayuda de .remove(0)
+- se crea la variable c que será igual a la suma de los elementos de la lista resultante con ayuda de sum()
+- se crea la variable d que será igual a la cantidad de elementos que contenga la lista resultante con ayuda de len()
+- se crea la variable hora inicio promedio que será igual al redondeo de la division entre c y d (c/d) con ayuda de round(c/d)
+- se declara una variable de hora final sin ceros que sera igual a la hora ingresada por el usuario
+- bucle mientras existan ceros en la variable creada
+- se eliminaran con ayuda de .remove(0)
+- se crea la variable c que será igual a la suma de los elementos de la lista resultante con ayuda de sum()
+- se crea la variable d que será igual a la cantidad de elementos que contenga la lista resultante con ayuda de len()
+- se crea la variable hora final promedio que será igual al redondeo de la division entre c y d (c/d) con ayuda de round(c/d)
+- se declara una variable minutos inicio sin ceros que sera igual a los minutos ingresados por el usuario
+- bucle mientras existan ceros en la variable creada
+- se eliminaran con ayuda de .remove(0)
+- se crea la variable c que será igual a la suma de los elementos de la lista resultante con ayuda de sum()
+- se crea la variable d que será igual a la cantidad de elementos que contenga la lista resultante con ayuda de len()
+- se crea la variable minutos inicio promedio que será igual al redondeo de la division entre c y d (c/d) con ayuda de round(c/d)
+- se declara una variable minutos final sin ceros que sera igual a los minutos ingresados por el usuario
+- bucle mientras existan ceros en la variable creada
+- se eliminaran con ayuda de .remove(0)
+- se crea la variable c que será igual a la suma de los elementos de la lista resultante con ayuda de sum()
+- se crea la variable d que será igual a la cantidad de elementos que contenga la lista resultante con ayuda de len()
+- se crea la variable minutos final promedio que será igual al redondeo de la division entre c y d (c/d) con ayuda de round(c/d)
+- se imprime el total de kms el total de petroleo el promedio de horas y minutos iniciales y el promedio de horas y minutos finales
+- preguntar si se desea mostrar 1 operario en especifico
+- pasar la respuesta a minusculas
+- si la respuesta es si
+- bucle mientras detener sea distinto a 2
+- preguntar que operario se desea ver
+- se declara variable indice = ingreso operario - 1
+- se imprime el n° operario, y con el indice se extrae el kms de la base de datos, el petroleo de la base de datos, la hora y minutos iniciales y la hora y minutos finales
+- preguntar si desea ver otro operario
+- pasar la respuesta a minusculas
+- si la respuesta es si. pasar
+- si la respuesta es no. detener valdrá 2
+- se pregunta si se desea ingresar un nuevo operario
+- se pasa la respuesta a minusculas
+- si la respuesta es si
+- se pregunta el número del nuevo operario
+- la respuesta se agrega a la lista operarios con append
+- se imprime la nueva base de operarios
+- se pide una clave nueva para el operario
+- se añade la nueva clave a la lista con append
+- se añade un cero en la base de datos de kms, petroleo, hora inicio, hora final, minuto incio, minuto final. todos con append(0)
+- preguntar si desea cerrar sesión
+- pasar la respuesta a minusculas
+- si su respuesta es si.
+- variable detener valdrá 1
+- break. y se detendrá el programa
